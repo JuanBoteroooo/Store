@@ -70,7 +70,7 @@ const UserProfile = () => {
 
   return (
     <div className="profile-container">
-      <h1>User Profile</h1>
+      <h1 className="profile-title">User Profile</h1>
       <div className="profile-details">
         <div className="profile-item">
           <label>Username:</label>
@@ -89,7 +89,6 @@ const UserProfile = () => {
           <select id="role" value={role} onChange={handleRoleChange}>
             <option value="1">User</option>
             <option value="2">Seller</option>
-            {/* Add more options if needed */}
           </select>
           <button onClick={handleRoleUpdate} className="btn">Update Role</button>
         </div>

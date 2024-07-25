@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/Homepage';
 import ProductDetails from './pages/ProductDetails';
 import LoginPage from './pages/Loginpage';
@@ -10,6 +10,7 @@ import SellerDashboard from './pages/SellerDashboard';
 import Navbar from './components/Navbar';
 import AddProductPage from './pages/AddProductPage';
 import SearchPage from './pages/SearchPage';
+import ThankYouPage from './pages/ThankYouPage'; // Nueva importación
 import axios from 'axios';
 
 const App = () => {
@@ -68,6 +69,7 @@ const App = () => {
         <Route path="/seller" element={<SellerDashboard />} />
         <Route path="/add-product" element={<AddProductPage />} />
         <Route path="/search" element={<SearchPage products={filteredProducts} />} />
+        <Route path="/thank-you" element={<ThankYouPage />} /> {/* Nueva ruta */}
       </Routes>
     </Router>
   );
